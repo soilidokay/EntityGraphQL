@@ -1,9 +1,13 @@
 grammar EntityQL;
 
 // Core building blocks
-ID: [a-z_A-Z]+ [a-z_A-Z0-9-]*;
+ID: [a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠƯàáâãèéêìíòóôõùúăđĩũơưẠ-ỹ_] 
+    [a-zA-Z0-9ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠƯàáâãèéêìíòóôõùúăđĩũơưẠ-ỹ0-9-_]*;
+
 DIGIT: [0-9];
-STRING_CHARS: [a-zA-Z0-9 \t`~!@#$%^&*()_+={}|\\:"'\u005B\u005D;<>?,./-];
+
+// Bao gồm các ký tự tiếng Việt và ký tự đặc biệt khác
+STRING_CHARS: [a-zA-Z0-9ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠƯàáâãèéêìíòóôõùúăđĩũơưẠ-ỹ \t`~!@#$%^&*()_+={}|\\:"'\u005B\u005D;<>?,./-];
 
 // identity includes keywords too
 identity: ID;
