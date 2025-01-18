@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
 
   <PropertyGroup>
     <TargetFrameworks>net6.0;net7.0</TargetFrameworks>
     <AssemblyName>EntityGraphQL.AspNet</AssemblyName>
-    <PackageId>EntityGraphQL.AspNet</PackageId>
+    <PackageId>EntityGraphQL.AspNet-Fix</PackageId>
     <PackageVersion>5.1.0</PackageVersion>
     <Description>Contains ASP.NET extensions and middleware for EntityGraphQL</Description>
     <Authors>Luke Murray</Authors>
@@ -23,7 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="../../README.md" Pack="true" PackagePath=""/>
-    <ProjectReference Include="../EntityGraphQL/EntityGraphQL.csproj" />
+    <None Include="../../README.md" Pack="true" PackagePath="" />
   </ItemGroup>
 </Project>
